@@ -1,0 +1,291 @@
+/* ─── ROOT / BASE ───────────────────────────────────────── */
+
+.form-root {
+  padding: 16px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─── CARD ──────────────────────────────────────────────── */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+/* ─── CAMPOS ───────────────────────────────────────────── */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.field-hint {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: -2px;
+}
+
+/* Inputs */
+
+.field input,
+.field textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.5;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #c4b89a;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-pale);
+}
+
+/* ─── ROWS ─────────────────────────────────────────────── */
+
+.fields-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fields-row .field {
+  flex: 1;
+  min-width: 220px;
+}
+
+.field input,
+.field textarea {
+  padding: 10px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-pale);
+}
+
+.field:focus-within {
+  background: rgba(0,0,0,0.02);
+  border-radius: 6px;
+  padding: 4px;
+}
+
+/* ─── SUBSEÇÕES ────────────────────────────────────────── */
+
+.subsection-title {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+/* ─── GRID: PAGE 1 (2 colunas) ─────────────────────────── */
+
+.two-col-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* ─── GRID: PAGE 2 (orações) ───────────────────────────── */
+
+.two-col-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ─── ESCALAS ──────────────────────────────────────────── */
+
+.escalas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.escala-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.escala-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.escala-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ─── TABELAS ─────────────────────────────────────────── */
+
+.escala-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.escala-table th,
+.escala-table td {
+  border: 1px solid var(--border);
+  padding: 6px;
+  text-align: left;
+}
+
+.escala-table th {
+  background: rgba(0,0,0,0.03);
+  font-weight: 600;
+}
+
+.escala-table input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  font-size: 11px;
+}
+
+/* ─── UPLOAD DE IMAGEM ─────────────────────────────────── */
+
+.image-upload-area {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.image-upload-area:hover {
+  border-color: var(--accent);
+  background: rgba(0,0,0,0.02);
+}
+
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.btn-clear-image {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-clear-image:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* ─── BOTÃO GERAR ─────────────────────────────────────── */
+
+.btn-gerar {
+  margin: 24px 24px 32px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(139,46,18,0.25);
+}
+
+.btn-gerar:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(139,46,18,0.30);
+}
+
+.btn-gerar:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+/* ─── RESPONSIVO (IMPORTANTÍSSIMO) ────────────────────── */
+
+@media (max-width: 900px) {
+  .two-col-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .escalas-grid {
+    grid-template-columns: 1fr;
+  }
+}
